@@ -12,7 +12,7 @@
 
 ### 方式 1：打包成 exe（推荐）
 ```bash
-pyinstaller -F -n YourApp-DeviceRequest tools/make_device_request.py
+pyinstaller -F -n YourApp-DeviceRequest tools/make_device_request.py --paths=.
 ```
 
 客户运行 `YourApp-DeviceRequest.exe` 后，会在当前目录生成：
