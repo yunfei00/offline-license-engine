@@ -1,4 +1,4 @@
-﻿[build-system]
+[build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
@@ -8,13 +8,14 @@ version = "0.1.0"
 description = "Offline-first licensing engine for packaged desktop applications."
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = ["typer>=0.12", "click>=8.1"]
 
 [project.scripts]
-ole = "ole.cli.main:app"
+ole = "ole.cli.main:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+

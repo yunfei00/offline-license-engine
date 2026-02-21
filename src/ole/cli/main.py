@@ -1,17 +1,18 @@
 ﻿from __future__ import annotations
 
-import typer
+import click
 from ole import __version__
 
-app = typer.Typer(add_completion=False)
 
-@app.command()
-def version() -> None:
-    """"Print version.""""
-    typer.echo(__version__)
-
+@click.group(help="Offline License Engine (OLE) CLI.")
 def main() -> None:
-    app()
+    pass
+
+
+@main.command("version", help="Print version.")
+def version_cmd() -> None:
+    click.echo(__version__)
+
 
 if __name__ == "__main__":
     main()
