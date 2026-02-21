@@ -1,0 +1,32 @@
+﻿# offline-license-engine
+
+Offline License Engine (OLE) - offline-first licensing skeleton for packaged desktop apps.
+
+## Dev
+- Install: pip install -e .
+- Run: ole --version
+- Test: pytest -q
+"@ | Set-Content -Encoding UTF8 README.md
+
+@"
+__pycache__/
+*.py[cod]
+*.so
+
+.venv/
+venv/
+
+build/
+dist/
+*.egg-info/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+.mypy_cache/
+.ruff_cache/
+
+.vscode/
+.idea/
+.DS_Store
